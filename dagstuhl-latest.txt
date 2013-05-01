@@ -1,0 +1,82 @@
+
+Outline for the presentation
+
+FROM MY NOTES: 
+WHAT DO WE WANT TO DO
+1. Concrete examples and concrete cases, concrete problems and motivating examples/means. 
+2. Identify real needs to be addressed and solutions/opportunities that we have in mind.
+3. Challenges on the topic that was allocated.
+4. Each group first decide on the reporter.
+5. Two pages summary of the group activity.
+6. Short presentation for main elements discussed, main/real motivating examples to be contributed on the general assembly/discussions
+
+
+What have we learned?
+  - Architecture plays an important role; it has implications 
+  - But nothing particularly unique in this context. it depends on the ingredients that you pick and choose for a particular use case
+
+No end to what could potentially be done with services. In practice this potential is not fulfilled by current platforms.
+
+Discussion Minutes
+
+Connector Tech. Switch: REST vs JSON/RPC vs SOAP/RPC vs MQ...
+(Re)integration of platforms for networked organizations
+Cross cutting across service definitions
+
+What is customization?
+  - depends on the context (service consumer, provider, platform) 
+  - from consumer perspective it is:
+      - "service selection, service configuration, platform configuration/constraint"
+  - from consumer/provider:
+     - "negotiable, flexible billing/accounting model" 
+  - from platform:
+    - "resource allocation, platform service selection"
+     
+How is customization expressed at the interface/service abstraction level?
+- request/job submission metadata/constraints
+- platform feature selection, activate/deactivate services for which you will be charged for
+- product lines?
+
+What are the platform mechanisms to allow customization?
+- strategy pattern: one abstract interface with multiple implementations
+- extension point: plugin additional implementations
+- architectural patterns for customization (such as?)
+- tuning/controller component for self-adaptive architectures
+
+
+
+HOW you design an architectural style for service oriented architectures 
+that facilitates customization?
+
+Loose coupling -> easier to customize
+Granularity of services: small -> easy to recompose
+
+formalizing customization - customization algebra?
+
+How are existing services/platforms customizable?
+
+How are customization done today? -- How is this unique to services/service platforms?
+   * How are different "features" of the platform customized and exposed? 
+     * Separate branches in the code, then compile and deploy separate branches to enable different customizations?
+     * One branch with feature toggles and turn toggles on and off at runtime through configuration?
+   * UI-level composition of widgets
+   * #ifdef
+   * if (config) { }
+   * Interface o = Class.new(config)
+   * Dynamic discovery and composition as a form of customization
+   * AOP for Devops languages?
+   * 
+
+Binding times
+- very early (design time, select-integrate-test)
+- early (compile, deploy)
+- late (deploy, runtime)
+- very late (runtime after failure)
+
+Example (from IBM): http://www-304.ibm.com/easyaccess/fileserve?contentid=231193
+
+http://ep.sonyx.net:9000/dagstuhl
+
+
+
+
